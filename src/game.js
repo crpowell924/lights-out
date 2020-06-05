@@ -57,7 +57,9 @@ class Game extends Component {
                 <button className="button has-text-light has-background-link" 
                     onClick={() => this.resetTiles()}>{buttonText}
                 </button>
+                <br/><br/>
                 <Board tiles={this.state.tiles} onClick={(ind) => this.handleTileClick(ind)}/>
+                <br/><br/>
                 <div className="subtitle has-text-light">Moves: {this.state.moves}</div>
             </section>
         )
@@ -81,11 +83,11 @@ class Board extends Component {
             tileSquares.push(this.renderTile(i));
         }
         return(
-            <section className="section">
+            // <section className="section">
                 <div className="board">
                     {tileSquares}
                 </div>
-            </section>
+            // </section>
         )
     }
 }
@@ -130,7 +132,5 @@ function didWinGame(tiles) {
     }
     return true;
 }
-
-
 
 export default Game;

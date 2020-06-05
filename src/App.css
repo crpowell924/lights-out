@@ -11,15 +11,21 @@
   margin-top: -1px;
   padding: 0;
   width: 50px;
+  border-radius: 3px;
 }
 .square:focus {
   outline: none;
 }
+.square:hover {
+  border: 2px solid hsl(0, 0%, 83%);
+}
 
 .lit {
-  background: #61dafb;
+  /* background: #7abfff; */
+  background: hsl(217, 100%, 81%);
 }
 .unlit {
+  /* background: hsl(217, 63%, 44%); */
   background: hsl(217, 71%, 53%);
 }
 
