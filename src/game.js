@@ -44,7 +44,6 @@ class Game extends Component {
         var statusText;
         var buttonText;
         if (this.state.didWinGame === true) {
-            // TODO: maybe stop onClick from working?
             statusText = "You won! Want to play again?";
             buttonText = "Play Again";
         } else {
@@ -83,11 +82,9 @@ class Board extends Component {
             tileSquares.push(this.renderTile(i));
         }
         return(
-            // <section className="section">
                 <div className="board">
                     {tileSquares}
                 </div>
-            // </section>
         )
     }
 }
@@ -108,7 +105,8 @@ function generateInitStates() {
     return tiles;
 }
 
-function toggleTiles(tiles, ind) {
+export const toggleTiles = (initTiles, ind) => {
+    const tiles = initTiles.slice()
     const targetIndices = [ind, ind-5, ind-1, ind+1, ind+5];
     const targetExistingIndices = targetIndices.filter(index => //filters out foul indices
         (index >=0 && index<25) && 
@@ -124,7 +122,7 @@ function toggleTiles(tiles, ind) {
     return tiles;
 }
 
-function didWinGame(tiles) {
+export const didWinGame = (tiles) => {
     for (var i = 0; i < tiles.length; i++){
         if (tiles[i]===1) {
             return false;
