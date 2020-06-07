@@ -2,7 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Once you have this repository cloned (and React and Node.js installed), navigate to the lights-out project directory (`cd lights-out`). From there, you can run from your command line:
+Once you have this repository cloned, navigate to the lights-out project directory (`cd lights-out`). 
+
+Then run `npm install` to install all the project dependencies.
+
+From there, you can run from your command line:
 
 ### `npm start`
 
