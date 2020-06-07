@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
 
-const easyWin = 
-[0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,1,
-0,0,0,1,1];
-
 class Game extends Component {
     // contains winning state, reset capability, tracks moves
     constructor(props) {

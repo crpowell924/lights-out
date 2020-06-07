@@ -1,5 +1,5 @@
 import React from 'react';
-import Game, {toggleTiles} from './game.js';
+import Game, {toggleTiles, didWinGame} from './game.js';
 
 
 const initTileSet = [
@@ -44,5 +44,41 @@ describe('toggleTiles Function', () => {
     });
 
 });
+
+describe('didWinGame Function', () => {
+    it('should return false with many 1s', () => {
+        const nonWinningTileSet = [
+            0,0,1,1,0,
+            1,0,1,1,1,
+            0,0,1,1,0,
+            0,1,0,0,1,
+            0,0,1,1,0]
+        const didWinBool = didWinGame(nonWinningTileSet);
+        expect(didWinBool).toEqual(false);
+    });
+    it('should return false with one 1', () => {
+        const almostWinningTileSet = [
+            0,0,0,0,0,
+            0,0,0,0,0,
+            0,0,0,0,0,
+            0,0,0,0,0,
+            0,0,0,0,1]
+        const didWinBool = didWinGame(almostWinningTileSet);
+        expect(didWinBool).toEqual(false);
+    });
+    it('should return true with all zeros', () => {
+        const winningTileSet = [
+            0,0,0,0,0,
+            0,0,0,0,0,
+            0,0,0,0,0,
+            0,0,0,0,0,
+            0,0,0,0,0]    
+        const didWinBool = didWinGame(winningTileSet);
+        expect(didWinBool).toEqual(true);       
+    });
+
+
+})
+
 
 
