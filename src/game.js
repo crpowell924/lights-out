@@ -101,7 +101,7 @@ function generateInitStates() {
 export const toggleTiles = (initTiles, ind) => {
     const tiles = initTiles.slice()
     const targetIndices = [ind, ind-5, ind-1, ind+1, ind+5];
-    const targetExistingIndices = targetIndices.filter(index => //filters out foul indices
+    const targetExistingIndices = targetIndices.filter(index => //filters out fou indices
         (index >=0 && index<25) && 
         (Math.abs(ind-index) > 1 || Math.floor(index/5) === Math.floor(ind/5))
     );

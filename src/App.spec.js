@@ -1,4 +1,3 @@
-import React from 'react';
 import Game, {toggleTiles, didWinGame} from './game.js';
 
 
